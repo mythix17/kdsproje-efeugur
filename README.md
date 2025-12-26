@@ -113,27 +113,8 @@ http://localhost:3000
 - **Grafikler**: Chart.js
 - **Font**: Outfit, JetBrains Mono
 
-## 📁 Proje Yapısı
-
-```
-yap/
-├── public/
-│   ├── index.html      # Ana sayfa
-│   ├── styles.css      # Stil dosyası
-│   └── app.js          # Frontend JavaScript
-├── server.js           # Express sunucusu
-├── package.json        # Proje bağımlılıkları
-├── env.example         # Örnek ortam değişkenleri
-└── README.md           # Bu dosya
-```
-
-## 📝 Lisans
-
-MIT License
-
----
-
 Geliştirici: KDS Projesi
+
 
 
 
