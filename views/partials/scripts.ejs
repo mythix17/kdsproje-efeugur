@@ -1,0 +1,14 @@
+<script>
+    // Login kontrolü
+    if (sessionStorage.getItem('isLoggedIn') !== 'true') {
+        window.location.href = 'login.html';
+    }
+
+    // Çıkış fonksiyonu
+    function logout() {
+        sessionStorage.removeItem('isLoggedIn');
+        sessionStorage.removeItem('username');
+        window.location.href = 'login.html';
+    }
+</script>
+<script src="app.js"></script>

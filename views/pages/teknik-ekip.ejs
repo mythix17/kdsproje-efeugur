@@ -1,0 +1,82 @@
+<!-- Teknik Ekip Section -->
+<section id="teknik-ekip-section" class="section">
+    <div class="section-header">
+        <h2>Teknik Ekip Analizi</h2>
+        <div class="section-actions">
+            <div class="filter-group">
+                <label>Görev:</label>
+                <select id="teknikGorevFilter">
+                    <option value="">Tümü</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="weight-panel">
+        <h3 class="weight-title">🎚️ Ağırlık Ayarları</h3>
+        <p class="weight-subtitle">Teknik ekip kriterlerinin ağırlıklarını ayarlayın (Toplam: %100)</p>
+        <div class="weight-sliders">
+            <div class="weight-slider-group">
+                <label>Deneyim Puanı</label>
+                <input type="range" id="teknikDeneyim" min="0" max="100" value="33" class="weight-slider">
+                <span class="weight-value">33%</span>
+            </div>
+            <div class="weight-slider-group">
+                <label>Başarı Puanı</label>
+                <input type="range" id="teknikBasari" min="0" max="100" value="33" class="weight-slider">
+                <span class="weight-value">33%</span>
+            </div>
+            <div class="weight-slider-group">
+                <label>Uyum Puanı</label>
+                <input type="range" id="teknikUyum" min="0" max="100" value="34" class="weight-slider">
+                <span class="weight-value">34%</span>
+            </div>
+        </div>
+        <div class="weight-total">
+            <span>Toplam:</span>
+            <span id="teknikToplam" class="total-value">100%</span>
+        </div>
+        <button class="btn-apply" id="teknikApply">Uygula ve Hesapla</button>
+    </div>
+
+    <div class="result-grid">
+        <div class="chart-card large">
+            <h3 class="chart-title">Teknik Ekip Sıralaması (Ağırlıklı Puan)</h3>
+            <div class="chart-container-large">
+                <canvas id="teknikChart"></canvas>
+            </div>
+        </div>
+        <div class="chart-card">
+            <h3 class="chart-title">Kriter Dağılımı (Radar)</h3>
+            <div class="chart-container">
+                <canvas id="teknikRadarChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="data-table-wrapper">
+        <table class="data-table" id="teknikTable">
+            <thead>
+                <tr>
+                    <th>Sıra</th>
+                    <th>Personel</th>
+                    <th class="sortable" data-sort="gorev">Görev <span class="sort-icon">↕</span></th>
+                    <th>Deneyim</th>
+                    <th>Başarı</th>
+                    <th>Uyum</th>
+                    <th>Kontrat (Ay)</th>
+                    <th>Ortalama</th>
+                    <th>Ağırlıklı Puan</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div class="pagination" id="teknikPagination" style="display: none;">
+            <button class="pagination-btn" id="teknikPrevBtn" disabled>Önceki</button>
+            <div class="pagination-info">
+                <span id="teknikPageInfo">Sayfa 1 / 1</span>
+            </div>
+            <button class="pagination-btn" id="teknikNextBtn" disabled>Sonraki</button>
+        </div>
+    </div>
+</section>

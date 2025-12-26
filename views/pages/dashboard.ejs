@@ -1,0 +1,91 @@
+<!-- Anasayfa Section -->
+<section id="dashboard-section" class="section active">
+    <div class="dashboard-grid">
+        <div class="stat-card gradient-blue" id="dashOyuncuCard">
+            <div class="stat-card-icon">⚽</div>
+            <div class="stat-card-content">
+                <span class="stat-card-value" id="dashOyuncu">-</span>
+                <span class="stat-card-label">Oyuncu</span>
+            </div>
+        </div>
+        <div class="stat-card gradient-green">
+            <div class="stat-card-icon">💰</div>
+            <div class="stat-card-content">
+                <span class="stat-card-value" id="dashSponsor">-</span>
+                <span class="stat-card-label">Sponsor</span>
+            </div>
+        </div>
+        <div class="stat-card gradient-purple" id="dashTeknikEkipCard">
+            <div class="stat-card-icon">👥</div>
+            <div class="stat-card-content">
+                <span class="stat-card-value" id="dashTeknikEkip">-</span>
+                <span class="stat-card-label">Teknik Ekip</span>
+            </div>
+        </div>
+        <div class="stat-card gradient-orange">
+            <div class="stat-card-icon">🏟️</div>
+            <div class="stat-card-content">
+                <span class="stat-card-value" id="dashTesis">-</span>
+                <span class="stat-card-label">Tesis</span>
+            </div>
+        </div>
+        <div class="stat-card gradient-pink">
+            <div class="stat-card-icon">👨‍👩‍👧‍👦</div>
+            <div class="stat-card-content">
+                <span class="stat-card-value" id="dashTaraftarGrup">-</span>
+                <span class="stat-card-label">Taraftar Grubu</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="charts-grid">
+        <div class="chart-card">
+            <div class="chart-header-with-select">
+                <h3 class="chart-title" id="dashSponsorChartTitle">Sponsor Finansal Katkı</h3>
+                <select id="dashSponsorChartType" class="chart-type-select">
+                    <option value="finansal">Finansal Katkı</option>
+                    <option value="marka">Marka Değeri</option>
+                    <option value="imaj">İmaj Puanı</option>
+                    <option value="taraftar">Taraftar Uyum Puanı</option>
+                </select>
+            </div>
+            <div class="chart-container">
+                <canvas id="dashSponsorChart"></canvas>
+            </div>
+        </div>
+        <div class="chart-card">
+            <div class="chart-header-with-select">
+                <h3 class="chart-title" id="dashTeknikEkipChartTitle">Teknik Ekip</h3>
+                <select id="dashTeknikEkipChartType" class="chart-type-select">
+                    <option value="deneyim">Deneyim Puanı</option>
+                    <option value="basari">Başarı Puanı</option>
+                    <option value="uyum">Uyum Puanı</option>
+                    <option value="gorev-dagilim">Görev Dağılımı</option>
+                </select>
+            </div>
+            <div class="chart-container">
+                <canvas id="dashTopTeknikEkipChart"></canvas>
+            </div>
+        </div>
+        <div class="chart-card">
+            <h3 class="chart-title">Pozisyonlara Göre Oyuncu Dağılımı</h3>
+            <div class="chart-container">
+                <canvas id="dashPozisyonChart"></canvas>
+            </div>
+        </div>
+        <div class="chart-card">
+            <div class="chart-header-with-select">
+                <h3 class="chart-title" id="dashTaraftarChartTitle">Taraftar Grupları</h3>
+                <select id="dashTaraftarChartType" class="chart-type-select">
+                    <option value="memnuniyet">Memnuniyet Puanı</option>
+                    <option value="etki">Taraftar Etki Puanı</option>
+                    <option value="medya">Medya Yorum Puanı</option>
+                    <option value="doluluk">Kapasite Doluluk</option>
+                </select>
+            </div>
+            <div class="chart-container">
+                <canvas id="dashTaraftarChart"></canvas>
+            </div>
+        </div>
+    </div>
+</section>

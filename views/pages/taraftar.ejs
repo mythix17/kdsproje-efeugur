@@ -1,0 +1,88 @@
+<!-- Taraftar Gruplari Section -->
+<section id="taraftar-gruplari-section" class="section">
+    <div class="section-header">
+        <h2>Taraftar Grup Analizi</h2>
+    </div>
+
+    <div class="weight-panel">
+        <h3 class="weight-title">🎚️ Ağırlık Ayarları</h3>
+        <p class="weight-subtitle">Taraftar grup kriterlerinin ağırlıklarını ayarlayın (Toplam: %100)</p>
+        <div class="weight-sliders">
+            <div class="weight-slider-group">
+                <label>Memnuniyet Puanı</label>
+                <input type="range" id="taraftarMemnuniyet" min="0" max="100" value="25" class="weight-slider">
+                <span class="weight-value">25%</span>
+            </div>
+            <div class="weight-slider-group">
+                <label>Taraftar Etki Puanı</label>
+                <input type="range" id="taraftarEtki" min="0" max="100" value="25" class="weight-slider">
+                <span class="weight-value">25%</span>
+            </div>
+            <div class="weight-slider-group">
+                <label>Medya Yorum Puanı</label>
+                <input type="range" id="taraftarMedya" min="0" max="100" value="25" class="weight-slider">
+                <span class="weight-value">25%</span>
+            </div>
+            <div class="weight-slider-group">
+                <label>Kapasite Doluluk</label>
+                <input type="range" id="taraftarDoluluk" min="0" max="100" value="25" class="weight-slider">
+                <span class="weight-value">25%</span>
+            </div>
+        </div>
+        <div class="weight-total">
+            <span>Toplam:</span>
+            <span id="taraftarToplam" class="total-value">100%</span>
+        </div>
+        <button class="btn-apply" id="taraftarApply">Uygula ve Hesapla</button>
+    </div>
+
+    <div class="result-grid">
+        <div class="chart-card large">
+            <div class="chart-header-with-select">
+                <h3 class="chart-title" id="taraftarChartTitle">Yıllara Göre Tribün Karşılaştırması (Çizgi)</h3>
+                <div class="chart-filter-group">
+                    <label>Yıl:</label>
+                    <select id="taraftarChartYilFilter" class="chart-type-select">
+                        <option value="">Tümü</option>
+                    </select>
+                </div>
+            </div>
+            <div class="chart-container-large">
+                <canvas id="taraftarChart"></canvas>
+            </div>
+        </div>
+        <div class="chart-card large">
+            <h3 class="chart-title">Tribünler - Yıllara Göre Ağırlıklı Puan (Sütun)</h3>
+            <div class="chart-container-large">
+                <canvas id="taraftarBarChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="data-table-wrapper">
+        <table class="data-table" id="taraftarTable">
+            <thead>
+                <tr>
+                    <th>Sıra</th>
+                    <th class="sortable" data-sort="tribun">Tribün <span class="sort-icon">↕</span></th>
+                    <th>Kapasite</th>
+                    <th>Yıl</th>
+                    <th>Memnuniyet</th>
+                    <th>Etki</th>
+                    <th>Medya</th>
+                    <th>Doluluk</th>
+                    <th>Ortalama</th>
+                    <th>Ağırlıklı Puan</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div class="pagination" id="taraftarPagination" style="display: none;">
+            <button class="pagination-btn" id="taraftarPrevBtn" disabled>Önceki</button>
+            <div class="pagination-info">
+                <span id="taraftarPageInfo">Sayfa 1 / 1</span>
+            </div>
+            <button class="pagination-btn" id="taraftarNextBtn" disabled>Sonraki</button>
+        </div>
+    </div>
+</section>

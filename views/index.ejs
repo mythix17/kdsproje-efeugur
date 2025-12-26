@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+<%- include('partials/head') %>
+
+    <body>
+        <!-- Toast Container -->
+        <div id="toastContainer" class="toast-container"></div>
+
+        <!-- Loading Overlay -->
+        <div id="loadingOverlay" class="loading-overlay">
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+                <p>Yükleniyor...</p>
+            </div>
+        </div>
+
+        <div class="app-container">
+            <%- include('partials/header') %>
+
+                <!-- Main Content -->
+                <main class="main-content">
+                    <!-- Page Header -->
+                    <div class="page-header">
+                        <h1 class="page-title" id="pageTitle">Anasayfa</h1>
+                        <p class="page-subtitle">Karar Destek Sistemi Kontrol Paneli</p>
+                    </div>
+
+                    <!-- Content Sections -->
+                    <div class="content-wrapper">
+                        <%- include('pages/dashboard') %>
+                            <%- include('pages/oyuncular') %>
+                                <%- include('pages/sponsorlar') %>
+                                    <%- include('pages/teknik-ekip') %>
+                                        <%- include('pages/tesisler') %>
+                                            <%- include('pages/taraftar') %>
+                                                <%- include('pages/karsilastirma') %>
+                    </div>
+                </main>
+        </div>
+
+        <%- include('partials/scripts') %>
+    </body>
+
+</html>

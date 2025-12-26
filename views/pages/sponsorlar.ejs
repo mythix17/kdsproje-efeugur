@@ -1,0 +1,79 @@
+<!-- Sponsorlar Section -->
+<section id="sponsorlar-section" class="section">
+    <div class="section-header">
+        <h2>Sponsor Analizi</h2>
+    </div>
+
+    <div class="weight-panel">
+        <h3 class="weight-title">🎚️ Ağırlık Ayarları</h3>
+        <p class="weight-subtitle">Sponsor kriterlerinin ağırlıklarını ayarlayın (Toplam: %100)</p>
+        <div class="weight-sliders">
+            <div class="weight-slider-group">
+                <label>Finansal Katkı</label>
+                <input type="range" id="sponsorFinansal" min="0" max="100" value="25" class="weight-slider">
+                <span class="weight-value">25%</span>
+            </div>
+            <div class="weight-slider-group">
+                <label>İmaj Puanı</label>
+                <input type="range" id="sponsorImaj" min="0" max="100" value="25" class="weight-slider">
+                <span class="weight-value">25%</span>
+            </div>
+            <div class="weight-slider-group">
+                <label>Taraftar Uyumu</label>
+                <input type="range" id="sponsorTaraftar" min="0" max="100" value="25" class="weight-slider">
+                <span class="weight-value">25%</span>
+            </div>
+            <div class="weight-slider-group">
+                <label>Marka Değeri</label>
+                <input type="range" id="sponsorMarka" min="0" max="100" value="25" class="weight-slider">
+                <span class="weight-value">25%</span>
+            </div>
+        </div>
+        <div class="weight-total">
+            <span>Toplam:</span>
+            <span id="sponsorToplam" class="total-value">100%</span>
+        </div>
+        <button class="btn-apply" id="sponsorApply">Uygula ve Hesapla</button>
+    </div>
+
+    <div class="result-grid">
+        <div class="chart-card large">
+            <h3 class="chart-title">Sponsor Sıralaması (Ağırlıklı Puan)</h3>
+            <div class="chart-container-large">
+                <canvas id="sponsorChart"></canvas>
+            </div>
+        </div>
+        <div class="chart-card">
+            <h3 class="chart-title">Kriter Dağılımı (Sütun)</h3>
+            <div class="chart-container">
+                <canvas id="sponsorRadarChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="data-table-wrapper">
+        <table class="data-table" id="sponsorTable">
+            <thead>
+                <tr>
+                    <th>Sıra</th>
+                    <th>Sponsor</th>
+                    <th class="sortable" data-sort="sektor">Sektör <span class="sort-icon">↕</span></th>
+                    <th>Finansal</th>
+                    <th>İmaj</th>
+                    <th>Taraftar</th>
+                    <th>Marka</th>
+                    <th>Ortalama</th>
+                    <th>Ağırlıklı Puan</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div class="pagination" id="sponsorPagination" style="display: none;">
+            <button class="pagination-btn" id="sponsorPrevBtn" disabled>Önceki</button>
+            <div class="pagination-info">
+                <span id="sponsorPageInfo">Sayfa 1 / 1</span>
+            </div>
+            <button class="pagination-btn" id="sponsorNextBtn" disabled>Sonraki</button>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,90 @@
+<!-- Oyuncular Section -->
+<section id="oyuncular-section" class="section">
+    <div class="section-header">
+        <h2>Oyuncu Analizi</h2>
+        <div class="section-actions">
+            <div class="filter-group">
+                <label>Pozisyon:</label>
+                <select id="oyuncuPozisyonFilter">
+                    <option value="">Tümü</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="weight-panel">
+        <h3 class="weight-title">🎚️ Ağırlık Ayarları</h3>
+        <p class="weight-subtitle">Kriterlerin ağırlıklarını ayarlarak sıralamayı değiştirin (Toplam: %100)</p>
+        <div class="weight-sliders">
+            <div class="weight-slider-group">
+                <label>Fiziksel Güç</label>
+                <input type="range" id="oyuncuFiziksel" min="0" max="100" value="25" class="weight-slider">
+                <span class="weight-value">25%</span>
+            </div>
+            <div class="weight-slider-group">
+                <label>Pozisyon İhtiyacı</label>
+                <input type="range" id="oyuncuPozisyon" min="0" max="100" value="25" class="weight-slider">
+                <span class="weight-value">25%</span>
+            </div>
+            <div class="weight-slider-group">
+                <label>Taktik Uyum</label>
+                <input type="range" id="oyuncuTaktik" min="0" max="100" value="25" class="weight-slider">
+                <span class="weight-value">25%</span>
+            </div>
+            <div class="weight-slider-group">
+                <label>Sağlık / Dayanıklılık</label>
+                <input type="range" id="oyuncuSaglik" min="0" max="100" value="25" class="weight-slider">
+                <span class="weight-value">25%</span>
+            </div>
+        </div>
+        <div class="weight-total">
+            <span>Toplam:</span>
+            <span id="oyuncuToplam" class="total-value">100%</span>
+        </div>
+        <button class="btn-apply" id="oyuncuApply">Uygula ve Hesapla</button>
+    </div>
+
+    <div class="result-grid">
+        <div class="chart-card large">
+            <h3 class="chart-title">Oyuncu Sıralaması (Ağırlıklı Puan)</h3>
+            <div class="chart-container-large">
+                <canvas id="oyuncuChart"></canvas>
+            </div>
+        </div>
+        <div class="chart-card">
+            <h3 class="chart-title">Kriter Dağılımı (Radar)</h3>
+            <div class="chart-container">
+                <canvas id="oyuncuRadarChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="data-table-wrapper">
+        <table class="data-table" id="oyuncuTable">
+            <thead>
+                <tr>
+                    <th>Sıra</th>
+                    <th>Oyuncu</th>
+                    <th class="sortable" data-sort="pozisyon">Pozisyon <span class="sort-icon">↕</span></th>
+                    <th>Yaş</th>
+                    <th>Uyruk</th>
+                    <th>Kontrat (Ay)</th>
+                    <th>Fiziksel</th>
+                    <th>Poz. İhtiyacı</th>
+                    <th>Taktik</th>
+                    <th>Sağlık</th>
+                    <th>Ortalama</th>
+                    <th>Ağırlıklı Puan</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div class="pagination" id="oyuncuPagination" style="display: none;">
+            <button class="pagination-btn" id="oyuncuPrevBtn" disabled>Önceki</button>
+            <div class="pagination-info">
+                <span id="oyuncuPageInfo">Sayfa 1 / 1</span>
+            </div>
+            <button class="pagination-btn" id="oyuncuNextBtn" disabled>Sonraki</button>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,86 @@
+<!-- Tesisler Section -->
+<section id="tesisler-section" class="section">
+    <div class="section-header">
+        <h2>Tesis Analizi</h2>
+    </div>
+
+    <div class="weight-panel">
+        <h3 class="weight-title">🎚️ Ağırlık Ayarları</h3>
+        <p class="weight-subtitle">Tesis kriterlerinin ağırlıklarını ayarlayın (Toplam: %100)</p>
+        <div class="weight-sliders">
+            <div class="weight-slider-group">
+                <label>Altyapı Kalitesi</label>
+                <input type="range" id="tesisAltyapi" min="0" max="100" value="25" class="weight-slider">
+                <span class="weight-value">25%</span>
+            </div>
+            <div class="weight-slider-group">
+                <label>Donanım Kalitesi</label>
+                <input type="range" id="tesisDonanim" min="0" max="100" value="25" class="weight-slider">
+                <span class="weight-value">25%</span>
+            </div>
+            <div class="weight-slider-group">
+                <label>Ulaşım Kolaylığı</label>
+                <input type="range" id="tesisUlasim" min="0" max="100" value="25" class="weight-slider">
+                <span class="weight-value">25%</span>
+            </div>
+            <div class="weight-slider-group">
+                <label>Konaklama Durumu</label>
+                <input type="range" id="tesisKonaklama" min="0" max="100" value="25" class="weight-slider">
+                <span class="weight-value">25%</span>
+            </div>
+        </div>
+        <div class="weight-total">
+            <span>Toplam:</span>
+            <span id="tesisToplam" class="total-value">100%</span>
+        </div>
+        <button class="btn-apply" id="tesisApply">Uygula ve Hesapla</button>
+    </div>
+
+    <div class="result-grid">
+        <div class="chart-card large">
+            <h3 class="chart-title">Tesis Sıralaması (Ağırlıklı Puan)</h3>
+            <div class="chart-container-large">
+                <canvas id="tesisChart"></canvas>
+            </div>
+        </div>
+        <div class="chart-card">
+            <div class="chart-header-with-select">
+                <h3 class="chart-title">Kriter Bazlı Değerlendirme</h3>
+                <select id="tesisKriterSelect" class="chart-type-select">
+                    <option value="altyapi">Altyapı Kalitesi</option>
+                    <option value="donanim">Donanım Kalitesi</option>
+                    <option value="ulasim">Ulaşım Kolaylığı</option>
+                    <option value="konaklama">Konaklama Durumu</option>
+                </select>
+            </div>
+            <div class="chart-container">
+                <canvas id="tesisRadarChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="data-table-wrapper">
+        <table class="data-table" id="tesisTable">
+            <thead>
+                <tr>
+                    <th>Sıra</th>
+                    <th>Tesis</th>
+                    <th>Altyapı</th>
+                    <th>Donanım</th>
+                    <th>Ulaşım</th>
+                    <th>Konaklama</th>
+                    <th>Ortalama</th>
+                    <th>Ağırlıklı Puan</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div class="pagination" id="tesisPagination" style="display: none;">
+            <button class="pagination-btn" id="tesisPrevBtn" disabled>Önceki</button>
+            <div class="pagination-info">
+                <span id="tesisPageInfo">Sayfa 1 / 1</span>
+            </div>
+            <button class="pagination-btn" id="tesisNextBtn" disabled>Sonraki</button>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,106 @@
+<!-- Karsilastirma Section -->
+<section id="karsilastirma-section" class="section">
+    <div class="section-header">
+        <h2>Çoklu Kriter Karşılaştırma</h2>
+    </div>
+
+    <!-- Step 1: Kategori Seçimi -->
+    <div class="comparison-step">
+        <div class="step-header">
+            <span class="step-number">1</span>
+            <h3>Kategori Seçin</h3>
+        </div>
+        <div class="comparison-panel">
+            <div class="comparison-select">
+                <label>Kategori:</label>
+                <select id="karsilastirmaKategori">
+                    <option value="">-- Seçin --</option>
+                    <option value="oyuncular">Oyuncular</option>
+                    <option value="sponsorlar">Sponsorlar</option>
+                    <option value="teknik-ekip">Teknik Ekip</option>
+                    <option value="tesisler">Tesisler</option>
+                    <option value="taraftar-gruplari">Taraftar Grupları</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <!-- Step 2: Alternatif Seçimi -->
+    <div class="comparison-step" id="stepAlternatifler" style="display: none;">
+        <div class="step-header">
+            <span class="step-number">2</span>
+            <h3>Karşılaştırılacak Alternatifleri Seçin <span class="step-hint">(En az 2 seçin)</span></h3>
+        </div>
+
+        <!-- Filtre Alanı -->
+        <div class="comparison-filter" id="karsilastirmaFilter" style="display: none;">
+            <div class="comparison-select">
+                <label id="karsilastirmaFilterLabel">Filtre:</label>
+                <select id="karsilastirmaFilterSelect">
+                    <option value="">Tümü</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="alternatif-list" id="alternatifList">
+            <!-- Dinamik olarak doldurulacak -->
+        </div>
+        <div class="selected-count">
+            Seçilen: <span id="selectedCount">0</span> / <span id="totalAlternatives">0</span>
+        </div>
+    </div>
+
+    <!-- Step 3: Ağırlık Ayarları -->
+    <div class="comparison-step" id="stepAgirliklar" style="display: none;">
+        <div class="step-header">
+            <span class="step-number">3</span>
+            <h3>Kriter Ağırlıklarını Ayarlayın</h3>
+        </div>
+        <div class="weight-panel comparison-weights">
+            <div class="weight-sliders" id="karsilastirmaSliders">
+                <!-- Dinamik olarak doldurulacak -->
+            </div>
+            <div class="weight-total">
+                <span>Toplam:</span>
+                <span id="karsilastirmaToplam" class="total-value">100%</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Step 4: Karşılaştır Butonu -->
+    <div class="comparison-step" id="stepKarsilastir" style="display: none;">
+        <button class="btn-compare-large" id="btnKarsilastir">
+            <span>⚖️</span> Karşılaştır
+        </button>
+    </div>
+
+    <!-- Sonuçlar -->
+    <div class="comparison-results" id="comparisonResults" style="display: none;">
+        <div class="result-grid">
+            <div class="chart-card large">
+                <h3 class="chart-title">Ağırlıklı Puan Karşılaştırması</h3>
+                <div class="chart-container-large">
+                    <canvas id="karsilastirmaBarChart"></canvas>
+                </div>
+            </div>
+            <div class="chart-card">
+                <h3 class="chart-title">Kriter Bazlı Karşılaştırma (Radar)</h3>
+                <div class="chart-container">
+                    <canvas id="karsilastirmaRadarChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-table-wrapper">
+            <table class="data-table" id="karsilastirmaTable">
+                <thead id="karsilastirmaTableHead">
+                    <!-- Dinamik -->
+                </thead>
+                <tbody id="karsilastirmaTableBody">
+                    <!-- Dinamik -->
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</section>

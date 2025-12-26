@@ -1,0 +1,51 @@
+<header class="top-header">
+    <div class="header-brand">
+        <span class="brand-name">KDS Panel</span>
+        <span class="club-badge"><img src="images/logo.png" alt="Fernebahce" class="club-logo">Fernebahce</span>
+    </div>
+
+    <nav class="top-nav">
+        <a href="#" class="nav-item active" data-section="dashboard">
+            <span class="nav-icon">📊</span>
+            <span>Anasayfa</span>
+        </a>
+        <a href="#" class="nav-item" data-section="oyuncular">
+            <span class="nav-icon">⚽</span>
+            <span>Oyuncular</span>
+        </a>
+        <a href="#" class="nav-item" data-section="sponsorlar">
+            <span class="nav-icon">💰</span>
+            <span>Sponsorlar</span>
+        </a>
+        <a href="#" class="nav-item nav-item-with-menu" data-section="teknik-ekip">
+            <span class="nav-icon">👥</span>
+            <span>Teknik Ekip</span>
+            <div class="nav-menu" id="navTeknikEkipMenu">
+                <!-- Dinamik olarak doldurulacak -->
+            </div>
+        </a>
+        <a href="#" class="nav-item" data-section="tesisler">
+            <span class="nav-icon">🏟️</span>
+            <span>Tesisler</span>
+        </a>
+        <a href="#" class="nav-item" data-section="taraftar-gruplari">
+            <span class="nav-icon">👨‍👩‍👧‍👦</span>
+            <span>Taraftar Grupları</span>
+        </a>
+        <a href="#" class="nav-item" data-section="karsilastirma">
+            <span class="nav-icon">⚖️</span>
+            <span>Karşılaştırma</span>
+        </a>
+    </nav>
+
+    <div class="header-actions">
+        <button class="btn-refresh" id="globalRefresh" title="Verileri Yenile">
+            <span class="refresh-icon">🔄</span>
+        </button>
+        <div class="stat-badge">
+            <span class="stat-label">Toplam Kayıt</span>
+            <span class="stat-value" id="totalRecords">-</span>
+        </div>
+        <button class="btn-logout" onclick="logout()">Çıkış Yap</button>
+    </div>
+</header>
